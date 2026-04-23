@@ -38,7 +38,8 @@ class KumoCloudAccount:
             self._kumo_dict = kumo_dict
             self._need_fetch = False
         else:
-            self._url = "https://geo-c.kumocloud.com/login"
+            # Canada customers use a different endpoint from USA customers
+            self._url = "https://mesca-prod.kumocloud.com/login/v2"
             self._kumo_dict = None
             self._need_fetch = True
 
